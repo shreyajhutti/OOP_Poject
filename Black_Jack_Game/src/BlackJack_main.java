@@ -23,6 +23,47 @@ public class BlackJack_main {
 		System.out.println("\n");
 		
 		
+		boolean meDone = false;
+		boolean dealerDone = false;
+		String ans;
+		
+		while (!meDone || !dealerDone) {
+			if(!meDone) {
+				System.out.print("Hit or Stay? (Enter H or S): ");
+				ans = sc.next();
+				System.out.println();
+				
+				if(ans.compareToIgnoreCase("H")==0){
+					
+					meDone=!me.addCard(theDeck.dealNextCard());
+					me.printHand(true);
+					
+				}else {
+					meDone = true;
+				}
+				
+			}
+			
+			if(!dealerDone) {
+				if(dealer.getHandSum() < 17) {
+					System.out.println("\nThe Dealer hits\n");
+					dealerDone = !dealer.addCard(theDeck.dealNextCard());
+					dealer.printHand(false);
+				} else {
+					System.out.println("\nThe Dealer stays\n");
+					dealerDone = true;
+				}
+			}
+			
+			System.out.println();
+			
+		}
+		
+		sc.close();
+		
+		
 	}
+	
+	
 
 }
