@@ -63,6 +63,20 @@ public class Player {
 		
 		return handSum;  
 	}
+        public void printHand(boolean showFirstCard) {
+		
+		
+		System.out.printf("%s's cards:\n", this.name);
+		for (Integer c =0; c < this.numCards; c++) {
+			if(c==0 && !showFirstCard) {
+				System.out.printf("[hidden]\n");
+			
+			} else {
+				System.out.printf("%s \n", this.hand[c].toString());
+			}
+		}
+		
+	}
 	
 	
 	
