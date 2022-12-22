@@ -75,7 +75,7 @@ public class Deck {
 		for (Integer card=0; card<numToPrint; card++) {
 		    System.out.printf("% 3d/%d %s\n", card+1, this.numCards, this.myCards[card].toString());
 	     }
-	System.out.printf("\t\t[%d other]\n", this.numCards-numToPrint);
+	System.out.printf("\t[%d others]\n", this.numCards-numToPrint);
 	}
 	
 	
