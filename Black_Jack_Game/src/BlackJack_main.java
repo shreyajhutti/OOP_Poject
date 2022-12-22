@@ -1,12 +1,17 @@
 import Game.Deck;
 import Game.Player;
+import Game.Rules;
+
 import java.util.Scanner;
 
 public class BlackJack_main {
 
 	public static void main(String[] args) {
 		
+        System.out.println("\nWELCOME TO BLACKJACK");
 		
+		Rules rules = new Rules();
+		rules.display();
 		
 		Scanner sc = new Scanner(System.in);
 		Deck theDeck = new Deck(1, true);
