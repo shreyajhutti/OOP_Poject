@@ -36,6 +36,34 @@ public class Player {
 	}
 	
 	
+	public int getHandSum() {
+		
+		Integer handSum = 0;
+		Integer cardNum;
+		Integer numAces = 0;
+		
+		for(Integer card = 0; card < this.numCards; card++) {
+			
+			cardNum = this.hand[card].getMyNumber();
+			
+			if(cardNum == 1) {
+				numAces++;
+				handSum += 11;
+			}else if(cardNum > 10) {
+				handSum += 10;
+			}else {
+				handSum += cardNum;
+			}
+		}
+		
+		while(handSum > 21 && numAces > 0) {
+			handSum -= 10;
+			numAces--;
+		}
+		
+		return handSum;  
+	}
+	
 	
 	
 }
