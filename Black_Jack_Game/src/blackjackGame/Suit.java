@@ -1,4 +1,4 @@
-package blackjack;
+package blackjackGame;
 
 public enum Suit {
 	Diamonds,
