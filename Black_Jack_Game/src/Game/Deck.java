@@ -57,10 +57,11 @@ public class Deck {
 			
 		}
 	}
+	
 	public Card dealNextCard() {
 		Card top = this.myCards[0];
-		
-		for( int card = 1; card < this.numCards; card++) {
+	
+		for( Integer card = 1; card < this.numCards; card++) {
 			this.myCards[card-1] = this.myCards[card];
 		}
 		this.myCards[this.numCards-1] = null;
