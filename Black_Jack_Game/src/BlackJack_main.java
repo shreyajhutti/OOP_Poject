@@ -6,10 +6,12 @@ public class BlackJack_main {
 
 	public static void main(String[] args) {
 		
+		
+		
 		Scanner sc = new Scanner(System.in);
 		Deck theDeck = new Deck(1, true);
 		
-		Player me = new Player("YOU");
+		Player me = new Player("YOUR");
 		Player dealer = new Player("DEALER");
 		
 		me.addCard(theDeck.dealNextCard());

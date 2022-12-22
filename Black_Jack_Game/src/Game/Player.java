@@ -66,7 +66,7 @@ public class Player {
         public void printHand(boolean showFirstCard) {
 		
 		
-		System.out.printf("%s's cards:\n", this.name);
+		System.out.printf("%s cards:\n", this.name);
 		for (Integer c =0; c < this.numCards; c++) {
 			if(c==0 && !showFirstCard) {
 				System.out.printf("[hidden]\n");
