@@ -23,7 +23,7 @@ public class BlackJack_main {
 		System.out.println("\n");
 		
 		
-                sc.close();
+        sc.close();
 	
 
 		me.printHand(true);
