@@ -25,7 +25,7 @@ public class Player {
 	
 	public boolean addCard(Card aCard) {
 		if (this.numCards == 10) {
-			System.err.printf("%s hand already has 10 cards;" + "cannot add another\n", this.name);
+			System.err.printf("\t%s hand already has 10 cards;" + "cannot add another\n", this.name);
 			System.exit(1);
 		}
 		
@@ -69,7 +69,7 @@ public class Player {
 		System.out.printf("%s cards:\n", this.name);
 		for (Integer c =0; c < this.numCards; c++) {
 			if(c==0 && !showFirstCard) {
-				System.out.printf("[hidden]\n");
+				System.out.printf("\t[hidden]\n");
 			
 			} else {
 				System.out.printf("%s \n", this.hand[c].toString());

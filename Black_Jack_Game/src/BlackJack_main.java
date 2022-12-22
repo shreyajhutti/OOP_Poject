@@ -8,23 +8,28 @@ public class BlackJack_main {
 
 	public static void main(String[] args) {
 		
-        System.out.println("\nWELCOME TO BLACKJACK");
-		
+        System.out.println("_____________________________________________________________________________________________________________________________");
+		System.out.println("\n................................................>>> WELCOME TO BLACKJACK <<<.................................................");
+		System.out.println("_____________________________________________________________________________________________________________________________");
 		Rules rules = new Rules();
 		rules.display();
+		System.out.println("_____________________________________________________________________________________________________________________________");
 		
 		Scanner sc = new Scanner(System.in);
 		Deck theDeck = new Deck(1, true);
 		
-		Player me = new Player("  YOUR");
-		Player dealer = new Player("  DEALER");
+		Player me = new Player("\tYOUR");
+		Player dealer = new Player("\n\tDEALER");
 		
 		me.addCard(theDeck.dealNextCard());
 		dealer.addCard(theDeck.dealNextCard());
 		me.addCard(theDeck.dealNextCard());
 		dealer.addCard(theDeck.dealNextCard());
 		
-		System.out.println("Cards are dealt\n");
+		System.out.println("\n\t-------------------------------");
+		System.out.println("\tCards are dealt.");
+		System.out.println("\t-------------------------------");
+		System.out.println();
 		me.printHand(true);
 		dealer.printHand(false);
 		System.out.println("\n");
@@ -35,7 +40,7 @@ public class BlackJack_main {
 		
 		while (!meDone || !dealerDone) {
 			if(!meDone) {
-				System.out.print("Hit or Stay? (Enter H or S): ");
+				System.out.print("\tHit or Stay? (Enter H or S): ");
 				ans = sc.next();
 				System.out.println();
 				
@@ -52,11 +57,11 @@ public class BlackJack_main {
 			
 			if(!dealerDone) {
 				if(dealer.getHandSum() < 17) {
-					System.out.println("\nThe Dealer hits\n");
+					System.out.println("\n\tThe Dealer hits.\n");
 					dealerDone = !dealer.addCard(theDeck.dealNextCard());
 					dealer.printHand(false);
 				} else {
-					System.out.println("\nThe Dealer stays\n");
+					System.out.println("\n\tThe Dealer stays.\n");
 					dealerDone = true;
 				}
 			}
@@ -72,11 +77,11 @@ public class BlackJack_main {
 		int dealerSum = dealer.getHandSum();
 		
 		if(mySum  > dealerSum && mySum <=21 || dealerSum > 21) {
-			System.out.println("\nYour win!!");
+			System.out.println("\n\tYou win!!\ns");
 		} 
 		else 
 		{
-			System.out.println("\nDealer wins!");
+			System.out.println("\n\tDealer wins!\n");
 		}	
 		
 	}
