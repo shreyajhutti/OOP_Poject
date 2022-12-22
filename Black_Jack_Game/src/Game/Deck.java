@@ -67,9 +67,6 @@ public class Deck {
 		
 		this.numCards--;
 		
-		
-		
-		
 		return top;
 	}
 	
