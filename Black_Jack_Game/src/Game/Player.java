@@ -69,7 +69,7 @@ public class Player {
 		System.out.printf("%s cards:\n", this.name);
 		for (Integer c =0; c < this.numCards; c++) {
 			if(c==0 && !showFirstCard) {
-				System.out.printf("[hidden]\n");
+				System.out.printf(" [hidden]\n");
 			
 			} else {
 				System.out.printf("%s \n", this.hand[c].toString());

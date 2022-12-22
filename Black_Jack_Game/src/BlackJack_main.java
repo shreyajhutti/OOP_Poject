@@ -16,8 +16,8 @@ public class BlackJack_main {
 		Scanner sc = new Scanner(System.in);
 		Deck theDeck = new Deck(1, true);
 		
-		Player me = new Player("  YOUR");
-		Player dealer = new Player("  DEALER");
+		Player me = new Player("YOUR");
+		Player dealer = new Player("DEALER'S");
 		
 		me.addCard(theDeck.dealNextCard());
 		dealer.addCard(theDeck.dealNextCard());
