@@ -36,7 +36,7 @@ public class Card {
 		case 3 : numStr = "Three";
 		         break; 
 		         
-		case 4 : numStr = "Four";
+		case 4 : numStr = "Four"; 
                  break; 
         
 		case 5 : numStr = "Five";

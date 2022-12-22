@@ -57,11 +57,12 @@ public class Deck {
 			
 		}
 	}
+	
 	public Card dealNextCard() {
 		Card top = this.myCards[0];
-		
-		for( int c = 1; c < this.numCards; c++) {
-			this.myCards[c-1] = this.myCards[c];
+	
+		for( Integer card = 1; card < this.numCards; card++) {
+			this.myCards[card-1] = this.myCards[card];
 		}
 		this.myCards[this.numCards-1] = null;
 		
@@ -69,5 +70,13 @@ public class Deck {
 		
 		return top;
 	}
+	
+	public void printDeck(Integer numToPrint) {
+		for (Integer card=0; card<numToPrint; card++) {
+		    System.out.printf("% 3d/%d %s\n", card+1, this.numCards, this.myCards[card].toString());
+	     }
+	System.out.printf("\t[%d others]\n", this.numCards-numToPrint);
+	}
+	
 	
 }
