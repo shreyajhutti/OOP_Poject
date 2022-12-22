@@ -14,5 +14,14 @@ public class Card {
 	public Integer getMyNumber() {
 		return myNumber;
 	}
+	
+	public String toString() {
+		String numStr;
+		
+		switch(this.myNumber) {
+		case 2 : numStr = "Two";
+		         break;
+		}
+	}
 
 }
