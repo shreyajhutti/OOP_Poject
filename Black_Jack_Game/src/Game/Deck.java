@@ -15,7 +15,6 @@ public class Deck {
 		
 	}
 	
-	
 	public Deck(Integer numDeck, boolean shuffle) {
 		
 		this.numCards = numDeck * 52;
@@ -38,14 +37,12 @@ public class Deck {
 		
 		if (shuffle==true) {
 			this.shuffle();
-		}
-		
-		
+		}	
 	}
 	
-	public void shuffle() {
+	public void shuffle() { 
 		
-		Random rng = new Random();    //RandomNumberGenerator
+		Random rng = new Random();    //rng->RandomNumberGenerator
 		
 		Card temp;
 		
@@ -59,7 +56,6 @@ public class Deck {
 			this.myCards[j]=temp;
 			
 		}
-		
 	}
 	
 	
