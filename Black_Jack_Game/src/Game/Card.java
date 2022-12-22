@@ -72,7 +72,7 @@ public class Card {
 		}
 		
 		return "\t" + numStr + " of " +mySuit.toString();
-		
+	
 	}
 
 }
